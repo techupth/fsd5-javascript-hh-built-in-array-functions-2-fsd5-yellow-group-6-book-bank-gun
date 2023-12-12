@@ -374,4 +374,22 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+let totalMembers = [];
+
+function checkMember(check) {
+  let removeNull;
+  let checkName;
+  let removeDuplicateName;
+  let countName;
+  removeNull = check.filter((bill) => bill.member !== null); // เอา null ใน member ออก
+  // console.table(removeNull);
+  checkName = removeNull.map((memberName) => memberName.member.name); // ดึง name มาเก็บใน Array ใหม่
+  // console.table(checkName);
+  removeDuplicateName = checkName.filter((x, y) => checkName.indexOf(x) === y);
+  console.table(removeDuplicateName);
+  countName = removeDuplicateName.length;
+  // console.log(countName);
+  return countName;
+}
+
+console.log(`Unique Members Count: ${checkMember(bills)}`);
