@@ -373,4 +373,11 @@ const bills = [
   },
 ];
 
-// Start coding here
+function findTotalPrice(bills) {
+  let totalAmount = bills.reduce((acumulate, currentbill) => {
+    return acumulate + currentbill.total;
+  }, 0);
+  return `Total bill transaction is ${totalAmount}`;
+}
+
+console.log(findTotalPrice(bills));

@@ -373,6 +373,10 @@ const bills = [
   },
 ];
 
-// Start coding here
+function checkName(bill) {
+  let check = bill.filter((info) => info.member !== null);
+  return check;
+}
 
-const newBills;
+const newBills = checkName(bills);
+console.log(newBills);

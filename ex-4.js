@@ -373,5 +373,18 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+function checkName(bill) {
+  let newBillMembers = [];
+  let check = bill.filter((info) => info.member !== null);
+  check.map((memberName) => {
+    return newBillMembers.push(memberName.member.name);
+  });
+  return newBillMembers.filter((item, index) => {
+    console.log(newBillMembers.indexOf(item) === index);
+    return newBillMembers.indexOf(item) === index;
+  }).length;
+}
+const billMembers = checkName(bills);
+
+console.log(billMembers);
+// const totalMembers;
