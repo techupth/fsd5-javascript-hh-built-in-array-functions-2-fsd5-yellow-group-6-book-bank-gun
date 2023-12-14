@@ -375,4 +375,13 @@ const bills = [
 
 // Start coding here
 
-const newBills;
+let newBills = [];
+function checkMember(check) {
+  let removeNull = [];
+  removeNull = check.filter((bill) => bill.member !== null);
+  // console.log(newBills);
+  return removeNull;
+}
+newBills = checkMember(bills);
+// console.table(newBills);
+console.log(newBills);
