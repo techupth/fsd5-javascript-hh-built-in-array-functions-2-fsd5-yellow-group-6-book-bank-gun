@@ -374,4 +374,13 @@ const bills = [
 ];
 
 // Start coding here
-const billMembers;
+let billMembers = [];
+function checkMember(check) {
+  let removeNull;
+  let checkName;
+  removeNull = check.filter((bill) => bill.member !== null);
+  checkName = removeNull.map((memberName) => memberName.member.name);
+  return checkName;
+}
+billMembers = checkMember(bills);
+console.log(billMembers);
